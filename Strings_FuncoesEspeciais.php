@@ -65,6 +65,7 @@
 		}elseif (strlen(utf8_decode($senha))<4) {
 			echo "A senha precisa ter mais de 4 caractes e sua senha possui neste momento ".$caracter.BR."Por favor revise sua senha!".BR;
 		}
+		echo "Aula parada em 21:02 por mal tempo";
 	?>
 </body>
 </html>
