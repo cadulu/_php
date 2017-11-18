@@ -56,16 +56,37 @@
 		$x = strrchr($strExemplo, " ");
 		echo $x.BR;
 		echo "----------------------------------------------".BR;
-		echo "Teste de contagem com strchr, strrchr e strlen".BR;
+		echo "Teste de contagem com strlen e substr".BR;
 		$senha = "few70912701289731-2";
 		$caracter = strlen(utf8_decode($senha));
 		if (strlen(utf8_decode($senha))>8) {
-			echo "A senha pode ter até 8 caracteres e sua senha possui neste momento ".$caracter.BR;
+			echo "A senha pode ter até 8 caracteres e sua senha possui neste momento ".$caracter.BR."Favor excluir os caracteres ".'"'.substr($senha,8).'"'.".";
 			echo "Por favor revise sua senha!".BR;
 		}elseif (strlen(utf8_decode($senha))<4) {
-			echo "A senha precisa ter mais de 4 caractes e sua senha possui neste momento ".$caracter.BR."Por favor revise sua senha!".BR;
+			echo "A senha precisa ter mais de 4 caractes e sua senha possui neste momento ".$caracter.BR." Por favor revise sua senha!".BR;
 		}
 		echo "Aula parada em 21:02 por mal tempo";
+		$x = substr($strExemplo, 4);
+		echo $x.BR;
+		$x = str_replace("composta", "criada", $strExemplo);
+		echo $strExemplo;
+		echo BR. $x.BR;
+		$x = chr(65);
+		echo $x.BR;
+		$x = strtolower($strExemplo);
+		echo $x.BR;
+		echo  strtoupper($strExemplo).BR;
+		echo ucfirst($strExemplo).BR;
+		echo ucwords($strExemplo).BR;
+		echo utf8_decode(strrev($strExemplo)).BR;
+		$strExemplo = " Carlos  Eduardo Luciano ";
+		echo $strExemplo.BR;
+		$x = trim($strExemplo);
+		$x = str_replace("  ", "_", $x);
+		echo $x.BR;
+		echo "Aula parada em 37:38 ".BR;
+
+
 	?>
 </body>
 </html>
