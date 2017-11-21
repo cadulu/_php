@@ -144,11 +144,12 @@
 		echo crypt($strExemplo, "token").BR;
 		echo "Teste de senha:".BR;
 		echo "Senha digitada é: Khadgar88".BR;
-		$senha = "Khadgar88";
+		$senha = "jgstom0318";
 		$guardar = md5($senha."e8691507bdf77ba0a4e2f319f9b1a491000a574f35b6ff67df074ac5bf49ab1c");
 		echo "Prova: ". $guardar.BR;
-		echo "Vou digitar a senha: Khadgar88".BR;
-		$digitei = "Khadgar88";
+		$digitei = "jgstom0318";
+		echo "Vou digitar a senha: ".$digitei.BR;
+		
 		$verificar = md5($digitei."e8691507bdf77ba0a4e2f319f9b1a491000a574f35b6ff67df074ac5bf49ab1c");
 		if ($verificar == $guardar) {
 				echo "Senha Ok. Entrou no Sistema".BR;
