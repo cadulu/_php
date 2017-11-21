@@ -6,14 +6,54 @@
 		
 		@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 		body { 
+			background: url(https://bnetcmsus-a.akamaihd.net/cms/template_resource/97IJ4U1G9AV41509583487500.jpg);
+
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 			
+			
+		}
+		div{
 			font-family: 'Josefin Sans', sans-serif;
-			color: #fff;
-			background: #808080; }
+			color: #ebdec2;
+			text-shadow: 1px 1px #000;
+			background: 808080
+			border-radius: 15px;
+		}
 
 	</style>
 </head>
 <body>
+	<div id = "container">
+	<script type="text/javascript">
+		var alfa;
+		alfa =3;
+		var beta = 'E-book de javascript';
+		document.write('__________________________________'+'<br>');
+		document.write('o valor de alfa é: ' + alfa);
+		document.write('<br>');
+		document.write('O valor de beta é: '+ beta + '<br>');
+		var alfa = "Eduardo ";
+		var beta = 'Luciano';
+		var gama = alfa + beta;
+		var br = '<br>';
+		document.write(gama + br);
+		var x = 10;
+		var y = 15.5;
+		var z = x + y;
+		document.write(z + br);
+		var resultado = true;
+		document.write ('O valor contido na variavel "resultado" é: ' + resultado + br);
+		var lista = new Array("Maça", "Laranja", "Abacaxi");
+		document.write('O valor do "Array" posição 0 é: ' + lista[0]+ br);
+		document.write('O valor do "Array" posição 1 é: ' + lista[1]+br);
+		document.write('O valor do "Array" posição 2 é: ' + lista[2]+br);
+		var texto = "JavaScript é na SoftBlue";
+		document.write('O texto: " '+ texto+'" tem "' + texto.length + " posições." + br);
+		document.write('__________________________________'+'<br>');
+		//document.write('<br>');
+	</script>
 	<?php
 		define("BR", "<br>");
 		$strExemplo = "Frase composta de exemplo para aula.";
@@ -85,8 +125,37 @@
 		$x = str_replace("  ", "_", $x);
 		echo $x.BR;
 		echo "Aula parada em 37:38 ".BR;
-
-
-	?>
+		$x = str_split($strExemplo,5);
+		echo $x[0].BR;
+		echo $x[2].BR;
+		echo $x[3].BR;
+		echo $x[4].BR;
+		$x = explode(" ", $strExemplo);
+		echo $x[0].BR;
+		echo $x[2].BR;
+		echo $x[3].BR;
+		echo $x[4].BR;
+		echo "explode() pode ser usado para fazer leitura em arquivos .csv por exemplo".BR;
+		echo "Agora algoritimos de HASH".BR;
+		$strExemplo = 123456;
+		echo sha1($strExemplo).BR;
+		echo md5($strExemplo."Teste de tokenseguro@@#!").BR; // Usar sempre Super Token
+		echo crypt($strExemplo, "token").BR;
+		echo crypt($strExemplo, "token").BR;
+		echo "Teste de senha:".BR;
+		echo "Senha digitada é: Khadgar88".BR;
+		$senha = "Khadgar88";
+		$guardar = md5($senha."e8691507bdf77ba0a4e2f319f9b1a491000a574f35b6ff67df074ac5bf49ab1c");
+		echo "Prova: ". $guardar.BR;
+		echo "Vou digitar a senha: Khadgar88".BR;
+		$digitei = "Khadgar88";
+		$verificar = md5($digitei."e8691507bdf77ba0a4e2f319f9b1a491000a574f35b6ff67df074ac5bf49ab1c");
+		if ($verificar == $guardar) {
+				echo "Senha Ok. Entrou no Sistema".BR;
+			} else {
+				echo "Senha não confere. Acesso não permitido".BR;
+			}
+		?>
+	</div>
 </body>
 </html>
